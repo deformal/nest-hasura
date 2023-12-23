@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx run node-k8s:serve:development",
+    "startTime": "2023-12-15T11:46:16.605Z",
+    "endTime": "2023-12-15T18:55:25.134Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "node-k8s:serve:development",
+      "target": "serve",
+      "projectName": "node-k8s",
+      "hash": "4387758254542775624",
+      "startTime": "2023-12-15T11:46:16.610Z",
+      "endTime": "2023-12-15T18:55:25.134Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    }
+  ]
+}

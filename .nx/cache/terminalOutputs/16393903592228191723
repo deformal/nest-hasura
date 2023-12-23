@@ -1,0 +1,59 @@
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9.22 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (541ffc6b19fc5230)
+[1m[31mDebugger listening on ws://localhost:9229/97a60f78-962f-4cdf-8853-36c2a3aa52da[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9.27 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (71bb9128296f9dca)
+[1m[31mDebugger listening on ws://localhost:9229/fb0c397a-b86b-497f-9c1d-ef0901636476[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9.31 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (5a18fc281b390f6b)
+[1m[31mDebugger listening on ws://localhost:9229/bad5d6fd-4472-4215-a4d9-0f0f4a344783[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9.27 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (db7a13c6a3447fca)
+[1m[31mDebugger listening on ws://localhost:9229/87bcb32a-61cb-448b-a5f2-1c863bb15b38[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9.23 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+
+[1m[31mERROR[39m[22m in [1m./apps/node-k8s/src/app/app.controller.ts:[32m[1m63:9[22m[39m[1m[39m[22m
+[90mTS2322: [39mType 'Promise<string>' is not assignable to type 'string'.
+  [0m [90m 61 |[39m[0m
+  [0m [90m 62 |[39m       [36mreturn[39m {[0m
+  [0m[31m[1m>[22m[39m[90m 63 |[39m         accessToken[33m:[39m auth_token[33m,[39m[0m
+  [0m [90m    |[39m         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 64 |[39m       }[33m;[39m[0m
+  [0m [90m 65 |[39m     } [36mcatch[39m (err) {[0m
+  [0m [90m 66 |[39m       [36mconst[39m error [33m=[39m err [36mas[39m [33mError[39m[33m;[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./apps/node-k8s/src/app/app.controller.ts:[32m[1m104:9[22m[39m[1m[39m[22m
+[90mTS2322: [39mType 'Promise<string>' is not assignable to type 'string'.
+  [0m [90m 102 |[39m[0m
+  [0m [90m 103 |[39m       [36mreturn[39m {[0m
+  [0m[31m[1m>[22m[39m[90m 104 |[39m         accessToken[33m:[39m auth_token[33m,[39m[0m
+  [0m [90m     |[39m         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 105 |[39m       }[33m;[39m[0m
+  [0m [90m 106 |[39m     } [36mcatch[39m (err) {[0m
+  [0m [90m 107 |[39m       [36mconst[39m error [33m=[39m err [36mas[39m [33mError[39m[33m;[39m[0m
+
+webpack compiled with [1m[31m2 errors[39m[22m (4c70faf5855f5af8)
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9.24 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (0158e9b3a83a2d16)
+[1m[31mDebugger listening on ws://localhost:9229/dfb5111e-39d0-4363-b00c-e34973ed41e3[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9.23 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (597899a304829816)
+[1m[31mDebugger listening on ws://localhost:9229/4b7527ab-ec86-4dac-aeaf-c7475561d4d2[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 9.29 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (31ed23d6e42e7118)
+[1m[31mDebugger listening on ws://localhost:9229/05e880bd-1b96-461b-b217-7856c077ee9c[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m

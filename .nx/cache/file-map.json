@@ -1,0 +1,470 @@
+{
+  "version": "6.0",
+  "nxVersion": "17.2.3",
+  "deps": {
+    "@nestjs/common": "^10.0.2",
+    "@nestjs/core": "^10.0.2",
+    "@nestjs/platform-express": "^10.0.2",
+    "@prisma/client": "^5.7.0",
+    "axios": "^1.0.0",
+    "body-parser": "^1.20.2",
+    "graphql": "^16.8.1",
+    "jsonwebtoken": "^9.0.2",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.0",
+    "tslib": "^2.3.0",
+    "@graphql-codegen/cli": "5.0.0",
+    "@graphql-codegen/introspection": "4.0.0",
+    "@graphql-codegen/typescript": "4.0.1",
+    "@graphql-codegen/typescript-resolvers": "4.0.1",
+    "@nestjs/schematics": "^10.0.1",
+    "@nestjs/testing": "^10.0.2",
+    "@nx/eslint": "17.2.3",
+    "@nx/eslint-plugin": "17.2.3",
+    "@nx/jest": "17.2.3",
+    "@nx/js": "17.2.3",
+    "@nx/nest": "17.2.3",
+    "@nx/node": "17.2.3",
+    "@nx/webpack": "17.2.3",
+    "@nx/workspace": "17.2.3",
+    "@parcel/watcher": "^2.3.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
+    "@svgr/webpack": "^8.0.1",
+    "@swc-node/register": "~1.6.7",
+    "@swc/core": "~1.3.85",
+    "@types/jest": "^29.4.0",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/lodash": "^4.14.202",
+    "@types/node": "^18.16.9",
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
+    "@typescript-eslint/parser": "^6.9.1",
+    "eslint": "~8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "jest": "^29.4.1",
+    "jest-environment-node": "^29.4.1",
+    "lodash": "^4.17.21",
+    "nx": "17.2.3",
+    "prettier": "^2.6.2",
+    "prisma": "^5.7.0",
+    "react-refresh": "^0.10.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "~5.2.2",
+    "url-loader": "^4.1.1"
+  },
+  "pathMappings": {
+    "@node-k8s/db-actions-sdk": [
+      "libs/db-actions-sdk/src/index.ts"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "7663861978715868291"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "1482810769789930301"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "16877376182141465221"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "16448050467312557263"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "235626400633494639"
+      },
+      {
+        "file": "README.md",
+        "hash": "3486778980206845526"
+      },
+      {
+        "file": "codegen.ts",
+        "hash": "17312600021279223090"
+      },
+      {
+        "file": "docker-compose.yml",
+        "hash": "3716349531975305121"
+      },
+      {
+        "file": "graphql.schema.json",
+        "hash": "11628438900179065952"
+      },
+      {
+        "file": "hasura/.env",
+        "hash": "7861454242738670445"
+      },
+      {
+        "file": "hasura/Dockerfile",
+        "hash": "280913869930393829"
+      },
+      {
+        "file": "hasura/config.yaml",
+        "hash": "6256437868896303153"
+      },
+      {
+        "file": "hasura/metadata/actions.graphql",
+        "hash": "10535000192736845321"
+      },
+      {
+        "file": "hasura/metadata/actions.yaml",
+        "hash": "11341164566865590856"
+      },
+      {
+        "file": "hasura/metadata/allow_list.yaml",
+        "hash": "5079120912223948982"
+      },
+      {
+        "file": "hasura/metadata/api_limits.yaml",
+        "hash": "15753941481085060538"
+      },
+      {
+        "file": "hasura/metadata/backend_configs.yaml",
+        "hash": "15753941481085060538"
+      },
+      {
+        "file": "hasura/metadata/cron_triggers.yaml",
+        "hash": "5079120912223948982"
+      },
+      {
+        "file": "hasura/metadata/databases/databases.yaml",
+        "hash": "7848636824517259423"
+      },
+      {
+        "file": "hasura/metadata/databases/users/tables/odoo_odoo_user.yaml",
+        "hash": "3581947262151718950"
+      },
+      {
+        "file": "hasura/metadata/databases/users/tables/public__prisma_migrations.yaml",
+        "hash": "12760283800111629386"
+      },
+      {
+        "file": "hasura/metadata/databases/users/tables/public_carts.yaml",
+        "hash": "6410379949905603611"
+      },
+      {
+        "file": "hasura/metadata/databases/users/tables/public_users.yaml",
+        "hash": "12367756677627672150"
+      },
+      {
+        "file": "hasura/metadata/databases/users/tables/tables.yaml",
+        "hash": "13175303602359340625"
+      },
+      {
+        "file": "hasura/metadata/graphql_schema_introspection.yaml",
+        "hash": "16653946783370864536"
+      },
+      {
+        "file": "hasura/metadata/inherited_roles.yaml",
+        "hash": "5079120912223948982"
+      },
+      {
+        "file": "hasura/metadata/metrics_config.yaml",
+        "hash": "15753941481085060538"
+      },
+      {
+        "file": "hasura/metadata/network.yaml",
+        "hash": "15753941481085060538"
+      },
+      {
+        "file": "hasura/metadata/opentelemetry.yaml",
+        "hash": "15753941481085060538"
+      },
+      {
+        "file": "hasura/metadata/query_collections.yaml",
+        "hash": "5079120912223948982"
+      },
+      {
+        "file": "hasura/metadata/remote_schemas.yaml",
+        "hash": "5079120912223948982"
+      },
+      {
+        "file": "hasura/metadata/rest_endpoints.yaml",
+        "hash": "5079120912223948982"
+      },
+      {
+        "file": "hasura/metadata/version.yaml",
+        "hash": "17758056563571449794"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "8278665120952369726"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "4185368808439573122"
+      },
+      {
+        "file": "minikube-linux-amd64",
+        "hash": "14254253004382415757"
+      },
+      {
+        "file": "nx.json",
+        "hash": "14785201546810776782"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "6090843151141262862"
+      },
+      {
+        "file": "package.json",
+        "hash": "17746012264905612877"
+      },
+      {
+        "file": "postgres/.env",
+        "hash": "16823876027849629037"
+      },
+      {
+        "file": "postgres/Dockerfile",
+        "hash": "593924008007088457"
+      },
+      {
+        "file": "prisma/.env",
+        "hash": "9222512697200766749"
+      },
+      {
+        "file": "prisma/migrations/20231215105601_initial/migration.sql",
+        "hash": "13271430041502757790"
+      },
+      {
+        "file": "prisma/migrations/20231215110012_adding_carts/migration.sql",
+        "hash": "8102816550868597310"
+      },
+      {
+        "file": "prisma/migrations/20231215110702_cart_and_users_relation/migration.sql",
+        "hash": "7938433157631627368"
+      },
+      {
+        "file": "prisma/migrations/20231215113518_adding_odoo_schema/migration.sql",
+        "hash": "9122778812622582780"
+      },
+      {
+        "file": "prisma/migrations/20231215113949_odoo_user/migration.sql",
+        "hash": "237001456745175448"
+      },
+      {
+        "file": "prisma/migrations/20231215114126_chagnes_in_cart/migration.sql",
+        "hash": "13289476086099437563"
+      },
+      {
+        "file": "prisma/migrations/20231215114531_remove_cart_id_from_user/migration.sql",
+        "hash": "1874810956346838986"
+      },
+      {
+        "file": "prisma/migrations/migration_lock.toml",
+        "hash": "11493296588214560035"
+      },
+      {
+        "file": "prisma/schema.prisma",
+        "hash": "1600436200755611320"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "13059158458219835379"
+      }
+    ],
+    "projectFileMap": {
+      "node-k8s": [
+        {
+          "file": "apps/node-k8s/.env",
+          "hash": "11418184092360096287"
+        },
+        {
+          "file": "apps/node-k8s/.eslintrc.json",
+          "hash": "2295303304320410742"
+        },
+        {
+          "file": "apps/node-k8s/jest.config.ts",
+          "hash": "4914273754657355190"
+        },
+        {
+          "file": "apps/node-k8s/project.json",
+          "hash": "17011989663986464298"
+        },
+        {
+          "file": "apps/node-k8s/src/app/app.controller.ts",
+          "hash": "8517172085009846264",
+          "deps": [
+            "npm:@nestjs/common",
+            "db-actions-sdk",
+            "npm:@prisma/client",
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/node-k8s/src/app/app.module.ts",
+          "hash": "11439992448606929605",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/node-k8s/src/app/app.service.ts",
+          "hash": "6262933602879371857",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@prisma/client",
+            "npm:express",
+            "npm:lodash",
+            "npm:jsonwebtoken"
+          ]
+        },
+        {
+          "file": "apps/node-k8s/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/node-k8s/src/main.ts",
+          "hash": "14617311086891737890",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/core"
+          ]
+        },
+        {
+          "file": "apps/node-k8s/src/odoo/app.controller.ts",
+          "hash": "11246062644204580506",
+          "deps": [
+            "npm:@nestjs/common",
+            "db-actions-sdk",
+            "npm:@prisma/client",
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/node-k8s/src/odoo/app.module.ts",
+          "hash": "11439992448606929605",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/node-k8s/src/odoo/app.service.ts",
+          "hash": "8738013940659137907",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@prisma/client",
+            "npm:express",
+            "npm:lodash",
+            "npm:jsonwebtoken"
+          ]
+        },
+        {
+          "file": "apps/node-k8s/tsconfig.app.json",
+          "hash": "17628448778285850515"
+        },
+        {
+          "file": "apps/node-k8s/tsconfig.json",
+          "hash": "12629745032125880412"
+        },
+        {
+          "file": "apps/node-k8s/tsconfig.spec.json",
+          "hash": "11550347367511341917"
+        },
+        {
+          "file": "apps/node-k8s/webpack.config.js",
+          "hash": "14100730557391234188",
+          "deps": [
+            "npm:@nx/webpack"
+          ]
+        }
+      ],
+      "db-actions-sdk": [
+        {
+          "file": "libs/db-actions-sdk/.eslintrc.json",
+          "hash": "13800677001662881425"
+        },
+        {
+          "file": "libs/db-actions-sdk/README.md",
+          "hash": "6274950893493525956"
+        },
+        {
+          "file": "libs/db-actions-sdk/jest.config.ts",
+          "hash": "17772405106734086057"
+        },
+        {
+          "file": "libs/db-actions-sdk/project.json",
+          "hash": "5769157399758366774"
+        },
+        {
+          "file": "libs/db-actions-sdk/src/index.ts",
+          "hash": "8962049714223336412"
+        },
+        {
+          "file": "libs/db-actions-sdk/src/lib/actions.ts",
+          "hash": "13769372090215310903"
+        },
+        {
+          "file": "libs/db-actions-sdk/tsconfig.json",
+          "hash": "2840670722752396445"
+        },
+        {
+          "file": "libs/db-actions-sdk/tsconfig.lib.json",
+          "hash": "8188472110264778699"
+        },
+        {
+          "file": "libs/db-actions-sdk/tsconfig.spec.json",
+          "hash": "11550347367511341917"
+        }
+      ],
+      "node-k8s-e2e": [
+        {
+          "file": "apps/node-k8s-e2e/.eslintrc.json",
+          "hash": "2295303304320410742"
+        },
+        {
+          "file": "apps/node-k8s-e2e/jest.config.ts",
+          "hash": "13919937570151717530"
+        },
+        {
+          "file": "apps/node-k8s-e2e/project.json",
+          "hash": "7476895669417408932"
+        },
+        {
+          "file": "apps/node-k8s-e2e/src/node-k8s/node-k8s.spec.ts",
+          "hash": "2263470703898423778",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/node-k8s-e2e/src/support/global-setup.ts",
+          "hash": "14688124112638150235"
+        },
+        {
+          "file": "apps/node-k8s-e2e/src/support/global-teardown.ts",
+          "hash": "10856769668484651558"
+        },
+        {
+          "file": "apps/node-k8s-e2e/src/support/test-setup.ts",
+          "hash": "9379448616442792630",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/node-k8s-e2e/tsconfig.json",
+          "hash": "15443990093475294480"
+        },
+        {
+          "file": "apps/node-k8s-e2e/tsconfig.spec.json",
+          "hash": "14519349202314136898"
+        }
+      ]
+    }
+  }
+}
