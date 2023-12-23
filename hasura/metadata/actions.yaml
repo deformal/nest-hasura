@@ -1,0 +1,24 @@
+actions:
+  - name: createNewUser
+    definition:
+      kind: synchronous
+      handler: http://172.22.120.229:3000/api/new-user
+      forward_client_headers: true
+      timeout: 2996
+  - name: login
+    definition:
+      kind: synchronous
+      handler: http://172.22.120.229:3000/api/login
+      forward_client_headers: true
+      timeout: 3000
+    permissions:
+      - role: user
+custom_types:
+  enums: []
+  input_objects:
+    - name: create_new_user_in
+    - name: login_in
+  objects:
+    - name: create_new_user_out
+    - name: login_out
+  scalars: []

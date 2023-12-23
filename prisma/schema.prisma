@@ -1,0 +1,43 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextIndex", "fullTextSearch", "metrics", "multiSchema", "postgresqlExtensions", "tracing", "views"]
+  binaryTargets   = ["native", "rhel-openssl-1.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  schemas  = ["freshsales", "odoo", "public"]
+}
+
+model users {
+  id         String     @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  created_at DateTime   @default(now()) @db.Timestamptz(6)
+  updated_at DateTime   @default(now()) @db.Timestamptz(6)
+  username   String     @unique
+  password   String     @unique
+  odoo       odoo_user?
+  cart       carts?
+
+  @@schema("public")
+}
+
+model carts {
+  id         String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  created_at DateTime @default(now()) @db.Timestamptz(6)
+  updated_at DateTime @default(now()) @db.Timestamptz(6)
+  user_id    String   @unique @db.Uuid
+  user       users    @relation(fields: [user_id], references: [id])
+
+  @@schema("public")
+}
+
+model odoo_user {
+  id         Int      @id @default(autoincrement())
+  created_at DateTime @default(now()) @db.Timestamptz(6)
+  updated_at DateTime @default(now()) @db.Timestamptz(6)
+  user_id    String   @unique @db.Uuid
+  user       users    @relation(fields: [user_id], references: [id])
+
+  @@schema("odoo")
+}

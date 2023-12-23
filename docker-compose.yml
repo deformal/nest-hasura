@@ -1,0 +1,34 @@
+version: '3.6'
+services:
+  postgres:
+    build: 
+      context: ./
+      dockerfile: ./postgres/Dockerfile
+    restart: always
+    ports:
+      - 5432:5432
+    env_file:
+      - ./postgres/.env
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready","-h","db"]
+      interval: 5s
+      timeout: 10s
+      retries: 5
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  hasura:
+    build: 
+      context: ./
+      dockerfile: ./hasura/Dockerfile
+    restart: always
+    ports:
+      - 8080:8080
+    env_file:
+      - ./hasura/.env
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  db_data:
