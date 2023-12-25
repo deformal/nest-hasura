@@ -1,4 +1,6 @@
 - "!include odoo_odoo_user.yaml"
+- "!include products_products.yaml"
 - "!include public__prisma_migrations.yaml"
 - "!include public_carts.yaml"
+- "!include public_carts_products.yaml"
 - "!include public_users.yaml"
