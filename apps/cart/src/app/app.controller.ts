@@ -17,21 +17,35 @@ export class AppController {
     @Res() res: Response
   ): Promise<AddProductToCartOut | Response> {
     try {
-      const products = body.products;
+      const { id: productId, quantity } = body;
       const userId = sessionVars['x-hasura-user-id'];
+
       const cart = await this.appService.prisma.carts.findFirstOrThrow({
         where: {
           user_id: { equals: userId },
         },
       });
+
       const newCartProducts =
-        await this.appService.prisma.carts_products.createMany({
-          data: products.map(({ quantity, id }) => {
-            return { product_id: id, quantity: quantity, cart_id: cart.id };
-          }),
+        await this.appService.prisma.carts_products.upsert({
+          where: {
+            cart_id: cart.id,
+            product_id: productId,
+          },
+          create: {
+            cart_id: cart.id,
+            product_id: productId,
+            quantity: quantity,
+          },
+          update: {
+            cart_id: cart.id,
+            product_id: productId,
+            quantity,
+          },
         });
+
       return res.json({
-        ok: newCartProducts.count > 0,
+        ok: newCartProducts.id ? true : false,
       });
     } catch (err) {
       const error = err as Error;

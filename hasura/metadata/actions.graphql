@@ -27,7 +27,8 @@ input login_in {
 }
 
 input addProductToCartIn {
-  products: [productInputData]!
+  id: Int!
+  quantity: Float!
 }
 
 input productInputData {

@@ -16,9 +16,6 @@
         "outputPath": "dist/apps/node-k8s",
         "main": "apps/node-k8s/src/main.ts",
         "tsConfig": "apps/node-k8s/tsconfig.app.json",
-        "assets": [
-          "apps/node-k8s/src/assets"
-        ],
         "webpackConfig": "apps/node-k8s/webpack.config.js"
       },
       "configurations": {

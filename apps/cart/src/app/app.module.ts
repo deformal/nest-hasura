@@ -5,7 +5,6 @@ import {
   RequestMethod,
 } from '@nestjs/common';
 import { BodyLoggerMiddleware } from './app.service';
-
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 

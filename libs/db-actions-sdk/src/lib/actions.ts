@@ -37,7 +37,8 @@ export type MutationLoginArgs = {
 };
 
 export type AddProductToCartIn = {
-  products: Array<InputMaybe<ProductInputData>>;
+  id: Scalars['Int']['input'];
+  quantity: Scalars['Float']['input'];
 };
 
 export type AddProductToCartOut = {

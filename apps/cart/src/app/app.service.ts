@@ -15,19 +15,6 @@ export class AppService {
   constructor() {
     this.prisma = new PrismaClient();
   }
-
-  async addProductsToCart(
-    product_ids: number[],
-    quantity: number,
-    cart_id: string
-  ): Promise<boolean> {
-    const newCartProduct = await this.prisma.carts_products.createMany({
-      data: product_ids.map((id) => {
-        return { product_id: id, cart_id: cart_id };
-      }),
-    });
-    return newCartProduct.count > 0;
-  }
 }
 
 @Injectable()
