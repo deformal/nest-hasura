@@ -17,11 +17,6 @@ export class AppController {
     this.db = appService.db();
   }
 
-  @Get()
-  getData() {
-    return this.appService.getData();
-  }
-
   @Get('/users')
   public async getAllUsers(@Req() request: Request) {
     Logger.debug('request body => ', request.body);
