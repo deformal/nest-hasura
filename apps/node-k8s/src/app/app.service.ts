@@ -1,8 +1,14 @@
-import { Injectable, NestMiddleware } from '@nestjs/common';
+import {
+  ExecutionContext,
+  Injectable,
+  NestMiddleware,
+  createParamDecorator,
+} from '@nestjs/common';
 import { PrismaClient } from '@prisma/client';
 import { Request, Response, NextFunction } from 'express';
 import { get } from 'lodash';
 import * as jwt from 'jsonwebtoken';
+import { UUID } from 'crypto';
 export type HasuraCustomClaims = {
   id: string;
   username?: string | null;
@@ -56,3 +62,19 @@ export class BodyLoggerMiddleware implements NestMiddleware {
     next();
   }
 }
+
+export interface Session_Varaibles {
+  'x-hasura-role': string;
+  'x-hasura-user-id': UUID;
+}
+
+export const SessonVariables = createParamDecorator(
+  (data: unknown, ctx: ExecutionContext): Session_Varaibles => {
+    const request = ctx.switchToHttp().getRequest();
+    const sessionVariables = get(
+      request.headers,
+      'sessionVars'
+    ) as Session_Varaibles;
+    return sessionVariables;
+  }
+);

@@ -1,11 +1,13 @@
 import { Body, Controller, Get, Logger, Post, Req, Res } from '@nestjs/common';
 import {
+  AddProductToCartIn,
+  AddProductToCartOut,
   Create_New_User_In,
   Create_New_User_Out,
   Login_In,
   Login_Out,
 } from '@node-k8s/db-actions-sdk';
-import { AppService } from './app.service';
+import { AppService, Session_Varaibles, SessonVariables } from './app.service';
 import { PrismaClient } from '@prisma/client';
 import { Response } from 'express';
 @Controller()
@@ -107,6 +109,51 @@ export class AppController {
       );
 
       return res.json({ accessToken: auth_token });
+    } catch (err) {
+      const error = err as Error;
+      res.statusCode = 400;
+      return res.json({
+        message: error.message,
+        extensions: { path: 'users', code: 400 },
+      });
+    }
+  }
+
+  public async insertProductInCart(
+    @SessonVariables() sessionVars: Session_Varaibles,
+    @Body() body: AddProductToCartIn,
+    @Res() res: Response
+  ): Promise<AddProductToCartOut | Response> {
+    try {
+      const { id: productId, quantity } = body;
+      const userId = sessionVars['x-hasura-user-id'];
+
+      const cart = await this.db.carts.findFirstOrThrow({
+        where: {
+          user_id: { equals: userId },
+        },
+      });
+
+      const newCartProducts = await this.db.carts_products.upsert({
+        where: {
+          cart_id: cart.id,
+          product_id: productId,
+        },
+        create: {
+          cart_id: cart.id,
+          product_id: productId,
+          quantity: quantity,
+        },
+        update: {
+          cart_id: cart.id,
+          product_id: productId,
+          quantity,
+        },
+      });
+
+      return res.json({
+        ok: newCartProducts.id ? true : false,
+      });
     } catch (err) {
       const error = err as Error;
       res.statusCode = 400;
