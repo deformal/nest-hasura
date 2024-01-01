@@ -68,7 +68,7 @@ export interface Session_Varaibles {
   'x-hasura-user-id': UUID;
 }
 
-export const SessonVariables = createParamDecorator(
+export const SessionVariables = createParamDecorator(
   (data: unknown, ctx: ExecutionContext): Session_Varaibles => {
     const request = ctx.switchToHttp().getRequest();
     const sessionVariables = get(

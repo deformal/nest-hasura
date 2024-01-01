@@ -7,7 +7,7 @@ import {
   Login_In,
   Login_Out,
 } from '@node-k8s/db-actions-sdk';
-import { AppService, Session_Varaibles, SessonVariables } from './app.service';
+import { AppService, SessionVariables, Session_Varaibles } from './app.service';
 import { PrismaClient } from '@prisma/client';
 import { Response } from 'express';
 @Controller()
@@ -120,7 +120,7 @@ export class AppController {
   }
 
   public async insertProductInCart(
-    @SessonVariables() sessionVars: Session_Varaibles,
+    @SessionVariables() sessionVars: Session_Varaibles,
     @Body() body: AddProductToCartIn,
     @Res() res: Response
   ): Promise<AddProductToCartOut | Response> {
