@@ -1,4 +1,4 @@
-- name: users
+- name: default
   kind: postgres
   configuration:
     connection_info:
@@ -6,4 +6,4 @@
         from_env: HASURA_GRAPHQL_DATABASE_URL
       isolation_level: read-committed
       use_prepared_statements: true
-  tables: "!include users/tables/tables.yaml"
+  tables: "!include default/tables/tables.yaml"

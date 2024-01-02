@@ -7,9 +7,9 @@ import {
   Login_In,
   Login_Out,
 } from '@node-k8s/db-actions-sdk';
-import { AppService, SessionVariables, Session_Varaibles } from './app.service';
 import { PrismaClient } from '@prisma/client';
 import { Response } from 'express';
+import { AppService, SessionVariables, Session_Varaibles } from './app.service';
 @Controller()
 export class AppController {
   private db: PrismaClient;

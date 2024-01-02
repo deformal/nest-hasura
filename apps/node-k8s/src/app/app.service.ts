@@ -5,10 +5,10 @@ import {
   createParamDecorator,
 } from '@nestjs/common';
 import { PrismaClient } from '@prisma/client';
-import { Request, Response, NextFunction } from 'express';
-import { get } from 'lodash';
-import * as jwt from 'jsonwebtoken';
 import { UUID } from 'crypto';
+import { NextFunction, Request, Response } from 'express';
+import * as jwt from 'jsonwebtoken';
+import { get } from 'lodash';
 export type HasuraCustomClaims = {
   id: string;
   username?: string | null;
