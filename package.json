@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "run-dev:local": "sh runLocal.sh && docker compose up --build -d",
+    "run-dev:test": "sh runLocal.sh && docker compose -f ./docker-compose.prod.yml up --build -d",
     "codegen": "graphql-codegen --config codegen.ts"
   },
   "private": true,

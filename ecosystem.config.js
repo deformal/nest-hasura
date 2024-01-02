@@ -3,11 +3,15 @@ module.exports = {
     {
       name: 'suplyd-server',
       script: 'main.js',
-      watch: true,
       instances: '2',
       exec_mode: 'fork',
+      out_file: './out.log',
+      error_file: './error.log',
+      log_type: 'json',
       cwd: './',
       env_production: {
+        watch: false,
+        exec_mode: 'cluster_mode',
         NODE_ENV: 'production',
         JWT_TOKEN: 'HQrtlF8S7PyjM97q0ie3e5O2YxJ4trlw7fLOO3cX',
         DATABASE_URL:
