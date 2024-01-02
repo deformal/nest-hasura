@@ -18,6 +18,8 @@ module.exports = {
           'postgresql://postgres:XDJ2jJ1mp5OKKQw5@postgres:5432/postgres',
       },
       env_development: {
+        watch: false,
+        exec_mode: 'cluster_mode',
         NODE_ENV: 'development',
         JWT_TOKEN: 'HQrtlF8S7PyjM97q0ie3e5O2YxJ4trlw7fLOO3cX',
         DATABASE_URL:

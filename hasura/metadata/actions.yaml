@@ -2,19 +2,19 @@ actions:
   - name: addProductToCart
     definition:
       kind: synchronous
-      handler: http://172.22.120.229:3000/api/cartproduct
+      handler: '{{SERVER}}/cartproduct'
     permissions:
       - role: user
   - name: createNewUser
     definition:
       kind: synchronous
-      handler: http://172.22.120.229:3000/api/new-user
+      handler: '{{SERVER}}/new-user'
       forward_client_headers: true
       timeout: 2996
   - name: login
     definition:
       kind: synchronous
-      handler: http://172.22.120.229:3000/api/login
+      handler: '{{SERVER}}/login'
       forward_client_headers: true
       timeout: 3000
     permissions:

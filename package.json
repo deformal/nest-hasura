@@ -5,6 +5,8 @@
   "scripts": {
     "run-dev:local": "sh runLocal.sh && docker compose up --build -d",
     "run-dev:test": "sh runLocal.sh && docker compose -f ./docker-compose.prod.yml up --build -d",
+    "console": "hasura --project=./hasura --envfile=.env console",
+    "migrate": "sh migration.sh",
     "codegen": "graphql-codegen --config codegen.ts"
   },
   "private": true,
