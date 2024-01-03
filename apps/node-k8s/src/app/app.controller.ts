@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Logger, Post, Req, Res } from '@nestjs/common';
+import { Body, Controller, Post, Res } from '@nestjs/common';
 import {
   AddProductToCartIn,
   AddProductToCartOut,
@@ -15,12 +15,6 @@ export class AppController {
   private db: PrismaClient;
   constructor(private readonly appService: AppService) {
     this.db = appService.db();
-  }
-
-  @Get('/users')
-  public async getAllUsers(@Req() request: Request) {
-    Logger.debug('request body => ', request.body);
-    Logger.log('Request headers => ', request.headers);
   }
 
   @Post('/new-user')
@@ -121,7 +115,6 @@ export class AppController {
     @Res() res: Response
   ): Promise<AddProductToCartOut | Response> {
     try {
-      console.log(sessionVars);
       const { id: productId, quantity } = body;
       const userId = sessionVars['x-hasura-user-id'];
       const cart = await this.db.carts.findFirstOrThrow({
@@ -130,25 +123,39 @@ export class AppController {
         },
       });
 
-      const newCartProducts = await this.db.carts_products.upsert({
+      const alreadyExists = await this.db.carts_products.findFirst({
         where: {
-          cart_id: cart.id,
-          product_id: productId,
-        },
-        create: {
-          cart_id: cart.id,
-          product_id: productId,
-          quantity: quantity,
-        },
-        update: {
-          cart_id: cart.id,
-          product_id: productId,
-          quantity,
+          product_id: { equals: productId },
+          cart_id: { equals: cart.id },
         },
       });
 
+      if (quantity <= 0 && alreadyExists) {
+        await this.db.carts_products.delete({
+          where: {
+            product_id: productId,
+          },
+        });
+      } else if (quantity > 0) {
+        await this.db.carts_products.upsert({
+          where: {
+            cart_id: cart.id,
+            product_id: productId,
+          },
+          create: {
+            cart_id: cart.id,
+            product_id: productId,
+            quantity: quantity,
+          },
+          update: {
+            cart_id: cart.id,
+            product_id: productId,
+            quantity,
+          },
+        });
+      }
       return res.json({
-        ok: newCartProducts.id ? true : false,
+        ok: true,
       });
     } catch (err) {
       const error = err as Error;
