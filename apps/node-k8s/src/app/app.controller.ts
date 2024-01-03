@@ -114,15 +114,16 @@ export class AppController {
     }
   }
 
+  @Post('/cartproduct')
   public async insertProductInCart(
     @SessionVariables() sessionVars: Session_Varaibles,
     @Body() body: AddProductToCartIn,
     @Res() res: Response
   ): Promise<AddProductToCartOut | Response> {
     try {
+      console.log(sessionVars);
       const { id: productId, quantity } = body;
       const userId = sessionVars['x-hasura-user-id'];
-
       const cart = await this.db.carts.findFirstOrThrow({
         where: {
           user_id: { equals: userId },

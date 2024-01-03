@@ -58,6 +58,7 @@ export class AppService {
 @Injectable()
 export class BodyLoggerMiddleware implements NestMiddleware {
   use(req: Request, res: Response, next: NextFunction) {
+    req.headers['sessionVars'] = get(req.body, 'session_variables');
     req.body = get(req.body, 'input.input');
     next();
   }

@@ -1,5 +1,7 @@
 #!/bin/bash
 set -e
+echo "Building server production dist"
+nx run node-k8s:build:production
 echo "Building docker images"
 echo "Building server image"
 docker buildx build -f ./apps/node-k8s/Dockerfile -t saurabhjainwal/node-k8s-server:latest ./ --platform=linux

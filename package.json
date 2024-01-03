@@ -5,8 +5,17 @@
   "scripts": {
     "run-dev:local": "sh runLocal.sh && docker compose up --build -d",
     "run-dev:test": "sh runLocal.sh && docker compose -f ./docker-compose.prod.yml up --build -d",
-    "build_images":"sh buildImages.sh",
+    "build_images": "sh buildImages.sh",
     "console": "hasura --project=./hasura --envfile=.env console",
+    "kube-delete:all": "kubectl delete -f k8s",
+    "kube-svc:all": "kubectl get svc",
+    "kube-apply:all": "kubectl apply -f k8s",
+    "kube-watch:all": "kubectl get pods --watch",
+    "kube-logs:hasura": "kubectl logs -f ",
+    "kube-logs:server": "kubectl logs -f ",
+    "kube-logs:postgres": "kubectl logs -f ",
+    "kube-rollout:server": "kubectl rollout restart deploy ",
+    "minik8-ext:hasura": "minikube tunnel",
     "migrate": "sh migration.sh",
     "codegen": "graphql-codegen --config codegen.ts"
   },
