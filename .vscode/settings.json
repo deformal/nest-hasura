@@ -22,6 +22,7 @@
         "uniqolor",
         "urql"
     ],
+    "terminal.integrated.fontWeight": "normal",
     "javascript.updateImportsOnFileMove.enabled": "always",
     "typescript.updateImportsOnFileMove.enabled": "always",
     "editor.codeActionsOnSave": {
