@@ -1,4 +1,10 @@
 type Mutation {
+  addProductToCart(
+    input: addProductToCartIn!
+  ): addProductToCartOut
+}
+
+type Mutation {
   createNewUser(
     input: create_new_user_in!
   ): create_new_user_out!
@@ -20,11 +26,25 @@ input login_in {
   password: String!
 }
 
+input addProductToCartIn {
+  id: Int!
+  quantity: Float!
+}
+
+input productInputData {
+  id: Int!
+  quantity: Float!
+}
+
 type create_new_user_out {
   accessToken: String!
 }
 
 type login_out {
   accessToken: String!
+}
+
+type addProductToCartOut {
+  ok: Boolean!
 }
 

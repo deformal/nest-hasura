@@ -16,8 +16,14 @@ export type Scalars = {
 
 export type Mutation = {
   __typename?: 'Mutation';
+  addProductToCart?: Maybe<AddProductToCartOut>;
   createNewUser: Create_New_User_Out;
   login: Login_Out;
+};
+
+
+export type MutationAddProductToCartArgs = {
+  input: AddProductToCartIn;
 };
 
 
@@ -28,6 +34,16 @@ export type MutationCreateNewUserArgs = {
 
 export type MutationLoginArgs = {
   input: Login_In;
+};
+
+export type AddProductToCartIn = {
+  id: Scalars['Int']['input'];
+  quantity: Scalars['Float']['input'];
+};
+
+export type AddProductToCartOut = {
+  __typename?: 'addProductToCartOut';
+  ok: Scalars['Boolean']['output'];
 };
 
 export type Create_New_User_In = {
@@ -48,4 +64,9 @@ export type Login_In = {
 export type Login_Out = {
   __typename?: 'login_out';
   accessToken: Scalars['String']['output'];
+};
+
+export type ProductInputData = {
+  id: Scalars['Int']['input'];
+  quantity: Scalars['Float']['input'];
 };

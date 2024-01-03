@@ -1,0 +1,67 @@
+{
+    "cSpell.words": [
+        "antd",
+        "Beem",
+        "codegen",
+        "Createcashback",
+        "entites",
+        "freshsales",
+        "Hasura",
+        "hubspot",
+        "ilike",
+        "indentifier",
+        "myaccount",
+        "odoo",
+        "Paymob",
+        "Popconfirm",
+        "raftlabs",
+        "Sider",
+        "suplyd",
+        "svgr",
+        "testid",
+        "uniqolor",
+        "urql"
+    ],
+    "terminal.integrated.fontWeight": "normal",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    //following will be in italic
+                    "comment",
+                    "entity.name.type.class", //class names
+                    "constant", //String, Number, Boolean…, this, super
+                    "storage.modifier", //static keyword
+                    "storage.type.class.js", //class keyword
+                    "keyword" //import, export, return…
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            },
+            {
+                "scope": [
+                    //following will be excluded from italics (VSCode has some defaults for italics)
+                    "invalid",
+                    "keyword.operator",
+                    "constant.numeric.css",
+                    "keyword.other.unit.px.css",
+                    "constant.numeric.decimal.js",
+                    "constant.numeric.json"
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
+    },
+    "githubPullRequests.ignoredPullRequestBranches": [
+        "master"
+    ]
+}

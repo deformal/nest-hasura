@@ -1,1 +1,5 @@
 FROM postgres:15
+EXPOSE 5432
+ENV POSTGRES_PASSWORD="XDJ2jJ1mp5OKKQw5" \
+    POSTGRES_USER="postgres" \
+    PGUSER="postgres"

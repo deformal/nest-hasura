@@ -1,0 +1,4 @@
+table:
+  name: product_type
+  schema: products
+is_enum: true
