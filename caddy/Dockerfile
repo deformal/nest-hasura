@@ -12,6 +12,6 @@ EXPOSE 2019
 
 WORKDIR /srv
 
-COPY ./caddyfile.json /etc/caddy/caddyfile.json
+COPY ../caddy/caddyfile.json /etc/caddy/caddyfile.json
 
 CMD ["caddy", "run", "--config", "/etc/caddy/caddyfile.json",  "--adapter", "json5"]
