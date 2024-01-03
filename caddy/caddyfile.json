@@ -1,0 +1,33 @@
+{
+    "admin": {
+      "disabled": false,
+      "listen": "0.0.0.0:2019",
+      "enforce_origin": false,
+      "origins": [""],
+      "config": {
+        "persist": true
+      }
+    },
+    "apps": {
+      "http": {
+        "servers": {
+          "suplyd": {
+            "@id": "suplyd",
+            "listen": [":443"],
+            "routes": [
+              {
+                "handle": [
+                  {
+                    "handler": "reverse_proxy",
+                    "upstreams": [{ "dial": "hasura:8080" }]
+                  }
+                ],
+                "match": [{ "host": ["<add_app_url>"] }]
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+  
