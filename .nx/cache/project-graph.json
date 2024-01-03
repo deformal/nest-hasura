@@ -52,59 +52,6 @@
         "implicitDependencies": []
       }
     },
-    "node-k8s-e2e": {
-      "name": "node-k8s-e2e",
-      "type": "e2e",
-      "data": {
-        "root": "apps/node-k8s-e2e",
-        "name": "node-k8s-e2e",
-        "$schema": "../../node_modules/nx/schemas/project-schema.json",
-        "implicitDependencies": [
-          "node-k8s"
-        ],
-        "projectType": "application",
-        "targets": {
-          "e2e": {
-            "cache": true,
-            "inputs": [
-              "default",
-              "^production",
-              "{workspaceRoot}/jest.preset.js"
-            ],
-            "executor": "@nx/jest:jest",
-            "outputs": [
-              "{workspaceRoot}/coverage/{e2eProjectRoot}"
-            ],
-            "options": {
-              "passWithNoTests": true,
-              "jestConfig": "apps/node-k8s-e2e/jest.config.ts"
-            },
-            "configurations": {
-              "ci": {
-                "ci": true,
-                "codeCoverage": true
-              }
-            }
-          },
-          "lint": {
-            "cache": true,
-            "inputs": [
-              "default",
-              "{workspaceRoot}/.eslintrc.json",
-              "{workspaceRoot}/.eslintignore",
-              "{workspaceRoot}/eslint.config.js"
-            ],
-            "executor": "@nx/eslint:lint",
-            "outputs": [
-              "{options.outputFile}"
-            ],
-            "options": {},
-            "configurations": {}
-          }
-        },
-        "tags": []
-      }
-    },
     "node-k8s": {
       "name": "node-k8s",
       "type": "app",
@@ -132,12 +79,9 @@
             "options": {
               "target": "node",
               "compiler": "tsc",
-              "outputPath": "dist/apps/node-k8s",
+              "outputPath": "dist",
               "main": "apps/node-k8s/src/main.ts",
               "tsConfig": "apps/node-k8s/tsconfig.app.json",
-              "assets": [
-                "apps/node-k8s/src/assets"
-              ],
               "webpackConfig": "apps/node-k8s/webpack.config.js"
             },
             "configurations": {
@@ -11106,18 +11050,6 @@
   },
   "dependencies": {
     "db-actions-sdk": [],
-    "node-k8s-e2e": [
-      {
-        "source": "node-k8s-e2e",
-        "target": "node-k8s",
-        "type": "implicit"
-      },
-      {
-        "source": "node-k8s-e2e",
-        "target": "npm:axios",
-        "type": "static"
-      }
-    ],
     "node-k8s": [
       {
         "source": "node-k8s",
@@ -11141,17 +11073,22 @@
       },
       {
         "source": "node-k8s",
-        "target": "npm:lodash",
-        "type": "static"
-      },
-      {
-        "source": "node-k8s",
         "target": "npm:jsonwebtoken",
         "type": "static"
       },
       {
         "source": "node-k8s",
+        "target": "npm:lodash",
+        "type": "static"
+      },
+      {
+        "source": "node-k8s",
         "target": "npm:@nestjs/core",
+        "type": "static"
+      },
+      {
+        "source": "node-k8s",
+        "target": "npm:dotenv",
         "type": "static"
       },
       {

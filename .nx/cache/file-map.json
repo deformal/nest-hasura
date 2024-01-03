@@ -8,6 +8,7 @@
     "@prisma/client": "^5.7.0",
     "axios": "^1.0.0",
     "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
     "graphql": "^16.8.1",
     "jsonwebtoken": "^9.0.2",
     "reflect-metadata": "^0.1.13",
@@ -61,116 +62,8 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".editorconfig",
-        "hash": "5443105041930014821"
-      },
-      {
-        "file": ".eslintignore",
-        "hash": "7663861978715868291"
-      },
-      {
-        "file": ".eslintrc.json",
-        "hash": "1482810769789930301"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "16877376182141465221"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "16448050467312557263"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "16267754514737964994"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "235626400633494639"
-      },
-      {
-        "file": "README.md",
-        "hash": "3486778980206845526"
-      },
-      {
-        "file": "codegen.ts",
-        "hash": "17312600021279223090"
-      },
-      {
-        "file": "docker-compose.yml",
-        "hash": "3716349531975305121"
-      },
-      {
-        "file": "graphql.schema.json",
-        "hash": "11628438900179065952"
-      },
-      {
-        "file": "hasura/.env",
-        "hash": "7861454242738670445"
-      },
-      {
-        "file": "hasura/Dockerfile",
-        "hash": "280913869930393829"
-      },
-      {
-        "file": "hasura/config.yaml",
-        "hash": "6256437868896303153"
-      },
-      {
-        "file": "hasura/metadata/actions.graphql",
-        "hash": "10535000192736845321"
-      },
-      {
-        "file": "hasura/metadata/actions.yaml",
-        "hash": "11341164566865590856"
-      },
-      {
-        "file": "hasura/metadata/allow_list.yaml",
-        "hash": "5079120912223948982"
-      },
-      {
-        "file": "hasura/metadata/api_limits.yaml",
-        "hash": "15753941481085060538"
-      },
-      {
-        "file": "hasura/metadata/backend_configs.yaml",
-        "hash": "15753941481085060538"
-      },
-      {
-        "file": "hasura/metadata/cron_triggers.yaml",
-        "hash": "5079120912223948982"
-      },
-      {
-        "file": "hasura/metadata/databases/databases.yaml",
-        "hash": "7848636824517259423"
-      },
-      {
-        "file": "hasura/metadata/databases/users/tables/odoo_odoo_user.yaml",
-        "hash": "3581947262151718950"
-      },
-      {
-        "file": "hasura/metadata/databases/users/tables/public__prisma_migrations.yaml",
-        "hash": "12760283800111629386"
-      },
-      {
-        "file": "hasura/metadata/databases/users/tables/public_carts.yaml",
-        "hash": "6410379949905603611"
-      },
-      {
-        "file": "hasura/metadata/databases/users/tables/public_users.yaml",
-        "hash": "12367756677627672150"
-      },
-      {
-        "file": "hasura/metadata/databases/users/tables/tables.yaml",
-        "hash": "13175303602359340625"
-      },
-      {
-        "file": "hasura/metadata/graphql_schema_introspection.yaml",
-        "hash": "16653946783370864536"
-      },
-      {
-        "file": "hasura/metadata/inherited_roles.yaml",
-        "hash": "5079120912223948982"
+        "file": "caddy/caddyfile.json",
+        "hash": "388440520220024853"
       },
       {
         "file": "hasura/metadata/metrics_config.yaml",
@@ -181,11 +74,171 @@
         "hash": "15753941481085060538"
       },
       {
+        "file": "hasura/metadata/databases/default/tables/products_products.yaml",
+        "hash": "8594685738602729811"
+      },
+      {
+        "file": "prisma/.env",
+        "hash": "9222512697200766749"
+      },
+      {
+        "file": "k8s/hasura.yml",
+        "hash": "12253213921325665395"
+      },
+      {
+        "file": "runLocal.sh",
+        "hash": "18045467648697457684"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": ".nx/cache/d/server-process.json",
+        "hash": "6624693325692417528"
+      },
+      {
+        "file": "k8s/server.yml",
+        "hash": "4879890713255423787"
+      },
+      {
+        "file": "nx.json",
+        "hash": "14785201546810776782"
+      },
+      {
+        "file": "hasura/metadata/databases/default/tables/public_carts_products.yaml",
+        "hash": "11132037687983267783"
+      },
+      {
+        "file": "k8s/secrets.yml",
+        "hash": "7920732445258373199"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "235626400633494639"
+      },
+      {
+        "file": "hasura/metadata/actions.graphql",
+        "hash": "3640679977414504523"
+      },
+      {
+        "file": "codegen.ts",
+        "hash": "17312600021279223090"
+      },
+      {
+        "file": "README.md",
+        "hash": "3486778980206845526"
+      },
+      {
+        "file": "hasura/metadata/databases/default/tables/odoo_odoo_user.yaml",
+        "hash": "3581947262151718950"
+      },
+      {
+        "file": "postgres/Dockerfile",
+        "hash": "8477329110629738564"
+      },
+      {
+        "file": "hasura/Dockerfile",
+        "hash": "13804217594728488042"
+      },
+      {
+        "file": "hasura/metadata/api_limits.yaml",
+        "hash": "15753941481085060538"
+      },
+      {
+        "file": "hasura/metadata/databases/default/tables/products_product_type.yaml",
+        "hash": "14319063015509374238"
+      },
+      {
+        "file": "hasura/migrations/default/1703616690783_squashed/down.sql",
+        "hash": "1546605502247231025"
+      },
+      {
+        "file": "hasura/metadata/databases/databases.yaml",
+        "hash": "3285673015711277661"
+      },
+      {
+        "file": "hasura/metadata/databases/default/tables/public_users.yaml",
+        "hash": "12367756677627672150"
+      },
+      {
+        "file": "package.json",
+        "hash": "10982052298862627088"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "6359271932961517713"
+      },
+      {
         "file": "hasura/metadata/opentelemetry.yaml",
         "hash": "15753941481085060538"
       },
       {
-        "file": "hasura/metadata/query_collections.yaml",
+        "file": "k8s/postgres.yml",
+        "hash": "6472173034108247287"
+      },
+      {
+        "file": "postgres/.env",
+        "hash": "16823876027849629037"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "7663861978715868291"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "1853322377241796060"
+      },
+      {
+        "file": "hasura/metadata/version.yaml",
+        "hash": "17758056563571449794"
+      },
+      {
+        "file": "hasura/metadata/backend_configs.yaml",
+        "hash": "15753941481085060538"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "4185368808439573122"
+      },
+      {
+        "file": "ecosystem.config.js",
+        "hash": "8554047746922966901"
+      },
+      {
+        "file": "hasura/metadata/graphql_schema_introspection.yaml",
+        "hash": "16653946783370864536"
+      },
+      {
+        "file": "hasura/metadata/databases/default/tables/public_carts.yaml",
+        "hash": "9251602165790930937"
+      },
+      {
+        "file": "hasura/metadata/cron_triggers.yaml",
+        "hash": "5079120912223948982"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "16448050467312557263"
+      },
+      {
+        "file": "buildImages.sh",
+        "hash": "9384156939692968181"
+      },
+      {
+        "file": "caddy/Dockerfile",
+        "hash": "15544776869770352174"
+      },
+      {
+        "file": "hasura/metadata/allow_list.yaml",
+        "hash": "5079120912223948982"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "1482810769789930301"
+      },
+      {
+        "file": "hasura/metadata/inherited_roles.yaml",
         "hash": "5079120912223948982"
       },
       {
@@ -193,99 +246,83 @@
         "hash": "5079120912223948982"
       },
       {
+        "file": "tsconfig.base.json",
+        "hash": "13059158458219835379"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "1582010486957333613"
+      },
+      {
+        "file": "docker-compose.yml",
+        "hash": "3716349531975305121"
+      },
+      {
+        "file": "migration.sh",
+        "hash": "744530516622431794"
+      },
+      {
+        "file": "hasura/metadata/databases/default/tables/tables.yaml",
+        "hash": "8624300711267271255"
+      },
+      {
+        "file": "docker-compose.prod.yml",
+        "hash": "1633008957957490511"
+      },
+      {
         "file": "hasura/metadata/rest_endpoints.yaml",
         "hash": "5079120912223948982"
       },
       {
-        "file": "hasura/metadata/version.yaml",
-        "hash": "17758056563571449794"
+        "file": "prisma/schema.prisma",
+        "hash": "18206594752474371197"
+      },
+      {
+        "file": "hasura/metadata/query_collections.yaml",
+        "hash": "5079120912223948982"
+      },
+      {
+        "file": "hasura/.env",
+        "hash": "16995953937852165086"
+      },
+      {
+        "file": "hasura/metadata/actions.yaml",
+        "hash": "2501096186225823962"
+      },
+      {
+        "file": "hasura/config.yaml",
+        "hash": "6256437868896303153"
+      },
+      {
+        "file": "hasura/migrations/default/1703616690783_squashed/up.sql",
+        "hash": "5866521978809832584"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": "hasura/metadata/databases/default/tables/public__prisma_migrations.yaml",
+        "hash": "12760283800111629386"
       },
       {
         "file": "jest.config.ts",
         "hash": "8278665120952369726"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "4185368808439573122"
-      },
-      {
-        "file": "minikube-linux-amd64",
-        "hash": "14254253004382415757"
-      },
-      {
-        "file": "nx.json",
-        "hash": "14785201546810776782"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "6090843151141262862"
-      },
-      {
-        "file": "package.json",
-        "hash": "17746012264905612877"
-      },
-      {
-        "file": "postgres/.env",
-        "hash": "16823876027849629037"
-      },
-      {
-        "file": "postgres/Dockerfile",
-        "hash": "593924008007088457"
-      },
-      {
-        "file": "prisma/.env",
-        "hash": "9222512697200766749"
-      },
-      {
-        "file": "prisma/migrations/20231215105601_initial/migration.sql",
-        "hash": "13271430041502757790"
-      },
-      {
-        "file": "prisma/migrations/20231215110012_adding_carts/migration.sql",
-        "hash": "8102816550868597310"
-      },
-      {
-        "file": "prisma/migrations/20231215110702_cart_and_users_relation/migration.sql",
-        "hash": "7938433157631627368"
-      },
-      {
-        "file": "prisma/migrations/20231215113518_adding_odoo_schema/migration.sql",
-        "hash": "9122778812622582780"
-      },
-      {
-        "file": "prisma/migrations/20231215113949_odoo_user/migration.sql",
-        "hash": "237001456745175448"
-      },
-      {
-        "file": "prisma/migrations/20231215114126_chagnes_in_cart/migration.sql",
-        "hash": "13289476086099437563"
-      },
-      {
-        "file": "prisma/migrations/20231215114531_remove_cart_id_from_user/migration.sql",
-        "hash": "1874810956346838986"
-      },
-      {
-        "file": "prisma/migrations/migration_lock.toml",
-        "hash": "11493296588214560035"
-      },
-      {
-        "file": "prisma/schema.prisma",
-        "hash": "1600436200755611320"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "13059158458219835379"
       }
     ],
     "projectFileMap": {
       "node-k8s": [
         {
           "file": "apps/node-k8s/.env",
-          "hash": "11418184092360096287"
+          "hash": "2693642987655189220"
         },
         {
           "file": "apps/node-k8s/.eslintrc.json",
           "hash": "2295303304320410742"
+        },
+        {
+          "file": "apps/node-k8s/Dockerfile",
+          "hash": "12774416053538404960"
         },
         {
           "file": "apps/node-k8s/jest.config.ts",
@@ -293,11 +330,11 @@
         },
         {
           "file": "apps/node-k8s/project.json",
-          "hash": "17011989663986464298"
+          "hash": "18030354605981627546"
         },
         {
           "file": "apps/node-k8s/src/app/app.controller.ts",
-          "hash": "8517172085009846264",
+          "hash": "2754392017300328824",
           "deps": [
             "npm:@nestjs/common",
             "db-actions-sdk",
@@ -314,13 +351,14 @@
         },
         {
           "file": "apps/node-k8s/src/app/app.service.ts",
-          "hash": "6262933602879371857",
+          "hash": "15979031237519085868",
           "deps": [
             "npm:@nestjs/common",
             "npm:@prisma/client",
+            "npm:crypto",
             "npm:express",
-            "npm:lodash",
-            "npm:jsonwebtoken"
+            "npm:jsonwebtoken",
+            "npm:lodash"
           ]
         },
         {
@@ -329,38 +367,11 @@
         },
         {
           "file": "apps/node-k8s/src/main.ts",
-          "hash": "14617311086891737890",
+          "hash": "17305477379608323318",
           "deps": [
             "npm:@nestjs/common",
-            "npm:@nestjs/core"
-          ]
-        },
-        {
-          "file": "apps/node-k8s/src/odoo/app.controller.ts",
-          "hash": "11246062644204580506",
-          "deps": [
-            "npm:@nestjs/common",
-            "db-actions-sdk",
-            "npm:@prisma/client",
-            "npm:express"
-          ]
-        },
-        {
-          "file": "apps/node-k8s/src/odoo/app.module.ts",
-          "hash": "11439992448606929605",
-          "deps": [
-            "npm:@nestjs/common"
-          ]
-        },
-        {
-          "file": "apps/node-k8s/src/odoo/app.service.ts",
-          "hash": "8738013940659137907",
-          "deps": [
-            "npm:@nestjs/common",
-            "npm:@prisma/client",
-            "npm:express",
-            "npm:lodash",
-            "npm:jsonwebtoken"
+            "npm:@nestjs/core",
+            "npm:dotenv"
           ]
         },
         {
@@ -377,7 +388,7 @@
         },
         {
           "file": "apps/node-k8s/webpack.config.js",
-          "hash": "14100730557391234188",
+          "hash": "14986586194730477904",
           "deps": [
             "npm:@nx/webpack"
           ]
@@ -406,7 +417,7 @@
         },
         {
           "file": "libs/db-actions-sdk/src/lib/actions.ts",
-          "hash": "13769372090215310903"
+          "hash": "13897214027385568329"
         },
         {
           "file": "libs/db-actions-sdk/tsconfig.json",
@@ -419,50 +430,6 @@
         {
           "file": "libs/db-actions-sdk/tsconfig.spec.json",
           "hash": "11550347367511341917"
-        }
-      ],
-      "node-k8s-e2e": [
-        {
-          "file": "apps/node-k8s-e2e/.eslintrc.json",
-          "hash": "2295303304320410742"
-        },
-        {
-          "file": "apps/node-k8s-e2e/jest.config.ts",
-          "hash": "13919937570151717530"
-        },
-        {
-          "file": "apps/node-k8s-e2e/project.json",
-          "hash": "7476895669417408932"
-        },
-        {
-          "file": "apps/node-k8s-e2e/src/node-k8s/node-k8s.spec.ts",
-          "hash": "2263470703898423778",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "apps/node-k8s-e2e/src/support/global-setup.ts",
-          "hash": "14688124112638150235"
-        },
-        {
-          "file": "apps/node-k8s-e2e/src/support/global-teardown.ts",
-          "hash": "10856769668484651558"
-        },
-        {
-          "file": "apps/node-k8s-e2e/src/support/test-setup.ts",
-          "hash": "9379448616442792630",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "apps/node-k8s-e2e/tsconfig.json",
-          "hash": "15443990093475294480"
-        },
-        {
-          "file": "apps/node-k8s-e2e/tsconfig.spec.json",
-          "hash": "14519349202314136898"
         }
       ]
     }
