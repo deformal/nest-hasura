@@ -1,21 +1,21 @@
 {
   "run": {
-    "command": "nx run node-k8s:serve:development",
-    "startTime": "2023-12-15T11:46:16.605Z",
-    "endTime": "2023-12-15T18:55:25.134Z",
+    "command": "nx run node-k8s:build:production",
+    "startTime": "2024-01-04T13:06:33.785Z",
+    "endTime": "2024-01-04T13:06:35.668Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "node-k8s:serve:development",
-      "target": "serve",
+      "taskId": "node-k8s:build:production",
+      "target": "build",
       "projectName": "node-k8s",
-      "hash": "4387758254542775624",
-      "startTime": "2023-12-15T11:46:16.610Z",
-      "endTime": "2023-12-15T18:55:25.134Z",
+      "hash": "8650661064709961331",
+      "startTime": "2024-01-04T13:06:33.790Z",
+      "endTime": "2024-01-04T13:06:35.668Z",
       "params": "",
       "cacheStatus": "cache-miss",
-      "status": 1
+      "status": 0
     }
   ]
 }

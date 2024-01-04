@@ -9,7 +9,7 @@
     "console": "hasura --project=./hasura --envfile=.env console",
     "kube-delete:all": "kubectl delete -f k8s",
     "kube-svc:all": "kubectl get svc",
-    "kube-apply:all": "kubectl apply -f k8s",
+    "kube-apply:all": "docker compose down && kubectl apply -f k8s",
     "kube-watch:all": "kubectl get pods --watch",
     "kube-logs:hasura": "kubectl logs -f ",
     "kube-logs:server": "kubectl logs -f ",

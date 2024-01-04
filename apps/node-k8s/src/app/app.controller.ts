@@ -97,7 +97,7 @@ export class AppController {
         process.env.JWT_TOKEN
       );
 
-      return res.json({ accessToken: auth_token });
+      return res.json({ accessToken: auth_token, ok: true });
     } catch (err) {
       const error = err as Error;
       res.statusCode = 400;

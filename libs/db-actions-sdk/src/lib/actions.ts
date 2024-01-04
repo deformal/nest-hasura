@@ -64,6 +64,7 @@ export type Login_In = {
 export type Login_Out = {
   __typename?: 'login_out';
   accessToken: Scalars['String']['output'];
+  ok: Scalars['Boolean']['output'];
 };
 
 export type ProductInputData = {

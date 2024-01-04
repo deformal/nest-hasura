@@ -42,6 +42,7 @@ type create_new_user_out {
 
 type login_out {
   accessToken: String!
+    ok:Boolean!
 }
 
 type addProductToCartOut {
