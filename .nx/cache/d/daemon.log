@@ -927,3 +927,39 @@ CreateNodesError: Unable to create nodes for apps/auth-e2e/project.json using pl
 [NX Daemon Server] - 2024-01-07T16:36:25.920Z - Done responding to the client recordOutputsHash
 [NX Daemon Server] - 2024-01-07T16:36:25.921Z - Handled RECORD_OUTPUTS_HASH. Handling time: 0. Response time: 0.
 [NX Daemon Server] - 2024-01-07T16:36:25.926Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-07T16:40:26.038Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-07T16:40:26.040Z - [WATCHER]: hasura/.env was modified
+[NX Daemon Server] - 2024-01-07T16:40:26.142Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-07T16:40:26.142Z - [REQUEST]: hasura/.env
+[NX Daemon Server] - 2024-01-07T16:40:26.142Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-07T16:40:26.177Z - Time taken for 'hash changed files from watcher' 0.44654202461242676ms
+[NX Daemon Server] - 2024-01-07T16:40:28.015Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-07T16:40:28.016Z - [WATCHER]: hasura/.env was modified
+[NX Daemon Server] - 2024-01-07T16:40:28.218Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-07T16:40:28.218Z - [REQUEST]: hasura/.env
+[NX Daemon Server] - 2024-01-07T16:40:28.218Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-07T16:40:28.255Z - Time taken for 'hash changed files from watcher' 1.023917019367218ms
+[NX Daemon Server] - 2024-01-07T16:40:38.813Z - [WATCHER]: hasura/.env was modified
+[NX Daemon Server] - 2024-01-07T16:40:38.813Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-07T16:40:39.215Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-07T16:40:39.215Z - [REQUEST]: hasura/.env
+[NX Daemon Server] - 2024-01-07T16:40:39.215Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-07T16:40:39.242Z - Time taken for 'hash changed files from watcher' 0.2136250138282776ms
+[NX Daemon Server] - 2024-01-07T16:40:40.048Z - [WATCHER]: hasura/.env was modified
+[NX Daemon Server] - 2024-01-07T16:40:40.049Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-07T16:40:40.850Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-07T16:40:40.850Z - [REQUEST]: hasura/.env
+[NX Daemon Server] - 2024-01-07T16:40:40.850Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-07T16:40:40.868Z - Time taken for 'hash changed files from watcher' 0.17254197597503662ms
+[NX Daemon Server] - 2024-01-07T16:40:42.016Z - [WATCHER]: k8s/cart.yml was modified
+[NX Daemon Server] - 2024-01-07T16:40:42.016Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-07T16:40:43.618Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-07T16:40:43.618Z - [REQUEST]: k8s/cart.yml
+[NX Daemon Server] - 2024-01-07T16:40:43.618Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-07T16:40:43.648Z - Time taken for 'hash changed files from watcher' 0.4122920036315918ms
+[NX Daemon Server] - 2024-01-07T16:40:45.147Z - [WATCHER]: hasura/.env was modified
+[NX Daemon Server] - 2024-01-07T16:40:45.148Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-07T16:40:48.349Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-07T16:40:48.349Z - [REQUEST]: hasura/.env
+[NX Daemon Server] - 2024-01-07T16:40:48.349Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-07T16:40:48.369Z - Time taken for 'hash changed files from watcher' 0.17904198169708252ms
