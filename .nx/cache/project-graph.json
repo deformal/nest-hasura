@@ -52,14 +52,14 @@
         "implicitDependencies": []
       }
     },
-    "node-k8s": {
-      "name": "node-k8s",
+    "auth": {
+      "name": "auth",
       "type": "app",
       "data": {
-        "root": "apps/node-k8s",
-        "name": "node-k8s",
+        "root": "apps/auth",
+        "name": "auth",
         "$schema": "../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "apps/node-k8s/src",
+        "sourceRoot": "apps/auth/src",
         "projectType": "application",
         "targets": {
           "build": {
@@ -79,10 +79,13 @@
             "options": {
               "target": "node",
               "compiler": "tsc",
-              "outputPath": "dist",
-              "main": "apps/node-k8s/src/main.ts",
-              "tsConfig": "apps/node-k8s/tsconfig.app.json",
-              "webpackConfig": "apps/node-k8s/webpack.config.js"
+              "outputPath": "dist/apps/auth",
+              "main": "apps/auth/src/main.ts",
+              "tsConfig": "apps/auth/tsconfig.app.json",
+              "assets": [
+                "apps/auth/src/assets"
+              ],
+              "webpackConfig": "apps/auth/webpack.config.js"
             },
             "configurations": {
               "development": {},
@@ -93,14 +96,14 @@
             "executor": "@nx/js:node",
             "defaultConfiguration": "development",
             "options": {
-              "buildTarget": "node-k8s:build"
+              "buildTarget": "auth:build"
             },
             "configurations": {
               "development": {
-                "buildTarget": "node-k8s:build:development"
+                "buildTarget": "auth:build:development"
               },
               "production": {
-                "buildTarget": "node-k8s:build:production"
+                "buildTarget": "auth:build:production"
               }
             }
           },
@@ -132,7 +135,104 @@
             ],
             "options": {
               "passWithNoTests": true,
-              "jestConfig": "apps/node-k8s/jest.config.ts"
+              "jestConfig": "apps/auth/jest.config.ts"
+            },
+            "configurations": {
+              "ci": {
+                "ci": true,
+                "codeCoverage": true
+              }
+            }
+          }
+        },
+        "tags": [],
+        "implicitDependencies": []
+      }
+    },
+    "cart": {
+      "name": "cart",
+      "type": "app",
+      "data": {
+        "root": "apps/cart",
+        "name": "cart",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "apps/cart/src",
+        "projectType": "application",
+        "targets": {
+          "build": {
+            "cache": true,
+            "dependsOn": [
+              "^build"
+            ],
+            "inputs": [
+              "production",
+              "^production"
+            ],
+            "executor": "@nx/webpack:webpack",
+            "outputs": [
+              "{options.outputPath}"
+            ],
+            "defaultConfiguration": "production",
+            "options": {
+              "target": "node",
+              "compiler": "tsc",
+              "outputPath": "dist/apps/cart",
+              "main": "apps/cart/src/main.ts",
+              "tsConfig": "apps/cart/tsconfig.app.json",
+              "assets": [
+                "apps/cart/src/assets"
+              ],
+              "webpackConfig": "apps/cart/webpack.config.js"
+            },
+            "configurations": {
+              "development": {},
+              "production": {}
+            }
+          },
+          "serve": {
+            "executor": "@nx/js:node",
+            "defaultConfiguration": "development",
+            "options": {
+              "buildTarget": "cart:build"
+            },
+            "configurations": {
+              "development": {
+                "buildTarget": "cart:build:development"
+              },
+              "production": {
+                "buildTarget": "cart:build:production"
+              }
+            }
+          },
+          "lint": {
+            "cache": true,
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/.eslintignore",
+              "{workspaceRoot}/eslint.config.js"
+            ],
+            "executor": "@nx/eslint:lint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {},
+            "configurations": {}
+          },
+          "test": {
+            "cache": true,
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "passWithNoTests": true,
+              "jestConfig": "apps/cart/jest.config.ts"
             },
             "configurations": {
               "ci": {
@@ -11050,49 +11150,86 @@
   },
   "dependencies": {
     "db-actions-sdk": [],
-    "node-k8s": [
+    "auth": [
       {
-        "source": "node-k8s",
+        "source": "auth",
         "target": "npm:@nestjs/common",
         "type": "static"
       },
       {
-        "source": "node-k8s",
+        "source": "auth",
         "target": "db-actions-sdk",
         "type": "static"
       },
       {
-        "source": "node-k8s",
+        "source": "auth",
         "target": "npm:@prisma/client",
         "type": "static"
       },
       {
-        "source": "node-k8s",
+        "source": "auth",
         "target": "npm:express",
         "type": "static"
       },
       {
-        "source": "node-k8s",
+        "source": "auth",
         "target": "npm:jsonwebtoken",
         "type": "static"
       },
       {
-        "source": "node-k8s",
+        "source": "auth",
         "target": "npm:lodash",
         "type": "static"
       },
       {
-        "source": "node-k8s",
+        "source": "auth",
         "target": "npm:@nestjs/core",
         "type": "static"
       },
       {
-        "source": "node-k8s",
-        "target": "npm:dotenv",
+        "source": "auth",
+        "target": "npm:@nx/webpack",
+        "type": "static"
+      }
+    ],
+    "cart": [
+      {
+        "source": "cart",
+        "target": "npm:@nestjs/common",
         "type": "static"
       },
       {
-        "source": "node-k8s",
+        "source": "cart",
+        "target": "db-actions-sdk",
+        "type": "static"
+      },
+      {
+        "source": "cart",
+        "target": "npm:@prisma/client",
+        "type": "static"
+      },
+      {
+        "source": "cart",
+        "target": "npm:express",
+        "type": "static"
+      },
+      {
+        "source": "cart",
+        "target": "npm:jsonwebtoken",
+        "type": "static"
+      },
+      {
+        "source": "cart",
+        "target": "npm:lodash",
+        "type": "static"
+      },
+      {
+        "source": "cart",
+        "target": "npm:@nestjs/core",
+        "type": "static"
+      },
+      {
+        "source": "cart",
         "target": "npm:@nx/webpack",
         "type": "static"
       }

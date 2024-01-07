@@ -46,11 +46,21 @@ services:
   server:
     build: 
       context: ./
-      dockerfile: ./apps/node-k8s/Dockerfile
+      dockerfile: ./apps/auth/Dockerfile
     ports:
       - 3000:3000
     env_file:
-      - ./apps/node-k8s/.env
+      - ./apps/auth/.env
+
+  cart:
+    build: 
+      context: ./
+      dockerfile: ./apps/cart/Dockerfile
+    ports:
+      - 4000:4000
+    env_file:
+      - ./apps/cart/.env
+
 
 volumes:
   caddy_data:

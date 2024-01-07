@@ -1,20 +1,31 @@
 {
   "run": {
-    "command": "nx run node-k8s:build:production",
-    "startTime": "2024-01-04T13:06:33.785Z",
-    "endTime": "2024-01-04T13:06:35.668Z",
+    "command": "nx run-many --target=build --all",
+    "startTime": "2024-01-07T16:36:25.877Z",
+    "endTime": "2024-01-07T16:36:25.922Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "node-k8s:build:production",
+      "taskId": "auth:build:production",
       "target": "build",
-      "projectName": "node-k8s",
-      "hash": "8650661064709961331",
-      "startTime": "2024-01-04T13:06:33.790Z",
-      "endTime": "2024-01-04T13:06:35.668Z",
+      "projectName": "auth",
+      "hash": "5022825290960236863",
+      "startTime": "2024-01-07T16:36:25.884Z",
+      "endTime": "2024-01-07T16:36:25.919Z",
       "params": "",
-      "cacheStatus": "cache-miss",
+      "cacheStatus": "local-cache-hit",
+      "status": 0
+    },
+    {
+      "taskId": "cart:build:production",
+      "target": "build",
+      "projectName": "cart",
+      "hash": "605460578906709013",
+      "startTime": "2024-01-07T16:36:25.885Z",
+      "endTime": "2024-01-07T16:36:25.920Z",
+      "params": "",
+      "cacheStatus": "local-cache-hit",
       "status": 0
     }
   ]
