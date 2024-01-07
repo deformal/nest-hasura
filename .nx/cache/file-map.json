@@ -62,144 +62,208 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "hasura/migrations/default/1703616690783_squashed/down.sql",
-        "hash": "1546605502247231025"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "13059158458219835379"
-      },
-      {
-        "file": "runLocal.sh",
-        "hash": "6856039062100076308"
-      },
-      {
-        "file": "caddy/caddyfile.json",
-        "hash": "388440520220024853"
-      },
-      {
-        "file": "k8s/secrets.yml",
-        "hash": "7920732445258373199"
-      },
-      {
-        "file": "buildImages.sh",
-        "hash": "9384156939692968181"
-      },
-      {
         "file": ".editorconfig",
         "hash": "5443105041930014821"
-      },
-      {
-        "file": ".nx/cache/d/server-process.json",
-        "hash": "5027035159685419677"
-      },
-      {
-        "file": "k8s/postgres.yml",
-        "hash": "6472173034108247287"
-      },
-      {
-        "file": "hasura/metadata/allow_list.yaml",
-        "hash": "5079120912223948982"
-      },
-      {
-        "file": "hasura/metadata/inherited_roles.yaml",
-        "hash": "5079120912223948982"
-      },
-      {
-        "file": "hasura/metadata/databases/default/tables/tables.yaml",
-        "hash": "8624300711267271255"
-      },
-      {
-        "file": "postgres/.env",
-        "hash": "16823876027849629037"
-      },
-      {
-        "file": "hasura/metadata/databases/default/tables/public_users.yaml",
-        "hash": "12367756677627672150"
-      },
-      {
-        "file": "hasura/metadata/graphql_schema_introspection.yaml",
-        "hash": "16653946783370864536"
-      },
-      {
-        "file": "hasura/metadata/actions.graphql",
-        "hash": "14478748731448414558"
-      },
-      {
-        "file": "hasura/metadata/cron_triggers.yaml",
-        "hash": "5079120912223948982"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "16267754514737964994"
-      },
-      {
-        "file": "ecosystem.config.js",
-        "hash": "8554047746922966901"
-      },
-      {
-        "file": "postgres/Dockerfile",
-        "hash": "8477329110629738564"
-      },
-      {
-        "file": "caddy/Dockerfile",
-        "hash": "15544776869770352174"
-      },
-      {
-        "file": "hasura/metadata/backend_configs.yaml",
-        "hash": "15753941481085060538"
-      },
-      {
-        "file": "hasura/metadata/api_limits.yaml",
-        "hash": "15753941481085060538"
-      },
-      {
-        "file": "hasura/metadata/databases/default/tables/products_products.yaml",
-        "hash": "8594685738602729811"
-      },
-      {
-        "file": "codegen.ts",
-        "hash": "17312600021279223090"
-      },
-      {
-        "file": "hasura/metadata/databases/default/tables/odoo_odoo_user.yaml",
-        "hash": "3581947262151718950"
-      },
-      {
-        "file": "k8s/hasura.yml",
-        "hash": "12253213921325665395"
-      },
-      {
-        "file": ".vscode/settings.json",
-        "hash": "1582010486957333613"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "8278665120952369726"
-      },
-      {
-        "file": "hasura/metadata/remote_schemas.yaml",
-        "hash": "5079120912223948982"
       },
       {
         "file": ".eslintignore",
         "hash": "7663861978715868291"
       },
       {
-        "file": "hasura/metadata/metrics_config.yaml",
-        "hash": "15753941481085060538"
+        "file": ".eslintrc.json",
+        "hash": "1482810769789930301"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "16877376182141465221"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "16448050467312557263"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "235626400633494639"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "1582010486957333613"
+      },
+      {
+        "file": "README.md",
+        "hash": "3486778980206845526"
+      },
+      {
+        "file": "buildImages.sh",
+        "hash": "9384156939692968181"
+      },
+      {
+        "file": "caddy/Dockerfile",
+        "hash": "15544776869770352174"
+      },
+      {
+        "file": "caddy/caddyfile.json",
+        "hash": "388440520220024853"
+      },
+      {
+        "file": "codegen.ts",
+        "hash": "17312600021279223090"
       },
       {
         "file": "docker-compose.prod.yml",
         "hash": "1633008957957490511"
       },
       {
-        "file": "hasura/config.yaml",
-        "hash": "6256437868896303153"
+        "file": "docker-compose.yml",
+        "hash": "3716349531975305121"
+      },
+      {
+        "file": "ecosystem.config.js",
+        "hash": "8554047746922966901"
       },
       {
         "file": "hasura/.env",
         "hash": "13933628771047698513"
+      },
+      {
+        "file": "hasura/Dockerfile",
+        "hash": "13804217594728488042"
+      },
+      {
+        "file": "hasura/config.yaml",
+        "hash": "6256437868896303153"
+      },
+      {
+        "file": "hasura/metadata/actions.graphql",
+        "hash": "14478748731448414558"
+      },
+      {
+        "file": "hasura/metadata/actions.yaml",
+        "hash": "2501096186225823962"
+      },
+      {
+        "file": "hasura/metadata/allow_list.yaml",
+        "hash": "5079120912223948982"
+      },
+      {
+        "file": "hasura/metadata/api_limits.yaml",
+        "hash": "15753941481085060538"
+      },
+      {
+        "file": "hasura/metadata/backend_configs.yaml",
+        "hash": "15753941481085060538"
+      },
+      {
+        "file": "hasura/metadata/cron_triggers.yaml",
+        "hash": "5079120912223948982"
+      },
+      {
+        "file": "hasura/metadata/databases/databases.yaml",
+        "hash": "3285673015711277661"
+      },
+      {
+        "file": "hasura/metadata/databases/default/tables/odoo_odoo_user.yaml",
+        "hash": "3581947262151718950"
+      },
+      {
+        "file": "hasura/metadata/databases/default/tables/products_product_type.yaml",
+        "hash": "14319063015509374238"
+      },
+      {
+        "file": "hasura/metadata/databases/default/tables/products_products.yaml",
+        "hash": "8594685738602729811"
+      },
+      {
+        "file": "hasura/metadata/databases/default/tables/public__prisma_migrations.yaml",
+        "hash": "12760283800111629386"
+      },
+      {
+        "file": "hasura/metadata/databases/default/tables/public_carts.yaml",
+        "hash": "9251602165790930937"
+      },
+      {
+        "file": "hasura/metadata/databases/default/tables/public_carts_products.yaml",
+        "hash": "11132037687983267783"
+      },
+      {
+        "file": "hasura/metadata/databases/default/tables/public_users.yaml",
+        "hash": "12367756677627672150"
+      },
+      {
+        "file": "hasura/metadata/databases/default/tables/tables.yaml",
+        "hash": "8624300711267271255"
+      },
+      {
+        "file": "hasura/metadata/graphql_schema_introspection.yaml",
+        "hash": "16653946783370864536"
+      },
+      {
+        "file": "hasura/metadata/inherited_roles.yaml",
+        "hash": "5079120912223948982"
+      },
+      {
+        "file": "hasura/metadata/metrics_config.yaml",
+        "hash": "15753941481085060538"
+      },
+      {
+        "file": "hasura/metadata/network.yaml",
+        "hash": "15753941481085060538"
+      },
+      {
+        "file": "hasura/metadata/opentelemetry.yaml",
+        "hash": "15753941481085060538"
+      },
+      {
+        "file": "hasura/metadata/query_collections.yaml",
+        "hash": "5079120912223948982"
+      },
+      {
+        "file": "hasura/metadata/remote_schemas.yaml",
+        "hash": "5079120912223948982"
+      },
+      {
+        "file": "hasura/metadata/rest_endpoints.yaml",
+        "hash": "5079120912223948982"
+      },
+      {
+        "file": "hasura/metadata/version.yaml",
+        "hash": "17758056563571449794"
+      },
+      {
+        "file": "hasura/migrations/default/1703616690783_squashed/down.sql",
+        "hash": "1546605502247231025"
+      },
+      {
+        "file": "hasura/migrations/default/1703616690783_squashed/up.sql",
+        "hash": "5866521978809832584"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "8278665120952369726"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "4185368808439573122"
+      },
+      {
+        "file": "k8s/hasura.yml",
+        "hash": "12253213921325665395"
+      },
+      {
+        "file": "k8s/postgres.yml",
+        "hash": "6472173034108247287"
+      },
+      {
+        "file": "k8s/secrets.yml",
+        "hash": "7920732445258373199"
+      },
+      {
+        "file": "k8s/server.yml",
+        "hash": "4879890713255423787"
       },
       {
         "file": "migration.sh",
@@ -210,104 +274,36 @@
         "hash": "14785201546810776782"
       },
       {
-        "file": "hasura/metadata/network.yaml",
-        "hash": "15753941481085060538"
-      },
-      {
-        "file": "hasura/metadata/databases/default/tables/public_carts_products.yaml",
-        "hash": "11132037687983267783"
-      },
-      {
-        "file": "hasura/metadata/query_collections.yaml",
-        "hash": "5079120912223948982"
-      },
-      {
-        "file": "hasura/metadata/version.yaml",
-        "hash": "17758056563571449794"
-      },
-      {
-        "file": "README.md",
-        "hash": "3486778980206845526"
-      },
-      {
         "file": "package-lock.json",
         "hash": "1853322377241796060"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "235626400633494639"
-      },
-      {
-        "file": "prisma/schema.prisma",
-        "hash": "18206594752474371197"
-      },
-      {
-        "file": "k8s/server.yml",
-        "hash": "4879890713255423787"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "16448050467312557263"
       },
       {
         "file": "package.json",
         "hash": "3789782203972328150"
       },
       {
-        "file": ".eslintrc.json",
-        "hash": "1482810769789930301"
+        "file": "postgres/.env",
+        "hash": "16823876027849629037"
       },
       {
-        "file": "hasura/metadata/databases/default/tables/public_carts.yaml",
-        "hash": "9251602165790930937"
+        "file": "postgres/Dockerfile",
+        "hash": "8477329110629738564"
       },
       {
         "file": "prisma/.env",
         "hash": "9222512697200766749"
       },
       {
-        "file": "hasura/Dockerfile",
-        "hash": "13804217594728488042"
+        "file": "prisma/schema.prisma",
+        "hash": "18206594752474371197"
       },
       {
-        "file": "hasura/metadata/actions.yaml",
-        "hash": "2501096186225823962"
+        "file": "runLocal.sh",
+        "hash": "6856039062100076308"
       },
       {
-        "file": "hasura/metadata/databases/databases.yaml",
-        "hash": "3285673015711277661"
-      },
-      {
-        "file": "hasura/migrations/default/1703616690783_squashed/up.sql",
-        "hash": "5866521978809832584"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "4185368808439573122"
-      },
-      {
-        "file": "hasura/metadata/opentelemetry.yaml",
-        "hash": "15753941481085060538"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "16877376182141465221"
-      },
-      {
-        "file": "hasura/metadata/databases/default/tables/products_product_type.yaml",
-        "hash": "14319063015509374238"
-      },
-      {
-        "file": "hasura/metadata/databases/default/tables/public__prisma_migrations.yaml",
-        "hash": "12760283800111629386"
-      },
-      {
-        "file": "docker-compose.yml",
-        "hash": "3716349531975305121"
-      },
-      {
-        "file": "hasura/metadata/rest_endpoints.yaml",
-        "hash": "5079120912223948982"
+        "file": "tsconfig.base.json",
+        "hash": "13059158458219835379"
       }
     ],
     "projectFileMap": {

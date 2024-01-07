@@ -39,3 +39,6 @@ testem.log
 Thumbs.db
 
 .nx/cache
+.nx/cache/d/daemon.log
+.nx/cache/file-map.json
+.nx/cache/nx_files.nxt
