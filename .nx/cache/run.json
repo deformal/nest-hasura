@@ -1,8 +1,8 @@
 {
   "run": {
     "command": "nx run-many --target=build --all",
-    "startTime": "2024-01-07T16:36:25.877Z",
-    "endTime": "2024-01-07T16:36:25.922Z",
+    "startTime": "2024-01-07T16:57:31.519Z",
+    "endTime": "2024-01-07T16:57:31.567Z",
     "inner": false
   },
   "tasks": [
@@ -11,8 +11,8 @@
       "target": "build",
       "projectName": "auth",
       "hash": "5022825290960236863",
-      "startTime": "2024-01-07T16:36:25.884Z",
-      "endTime": "2024-01-07T16:36:25.919Z",
+      "startTime": "2024-01-07T16:57:31.526Z",
+      "endTime": "2024-01-07T16:57:31.564Z",
       "params": "",
       "cacheStatus": "local-cache-hit",
       "status": 0
@@ -22,8 +22,8 @@
       "target": "build",
       "projectName": "cart",
       "hash": "605460578906709013",
-      "startTime": "2024-01-07T16:36:25.885Z",
-      "endTime": "2024-01-07T16:36:25.920Z",
+      "startTime": "2024-01-07T16:57:31.526Z",
+      "endTime": "2024-01-07T16:57:31.565Z",
       "params": "",
       "cacheStatus": "local-cache-hit",
       "status": 0
