@@ -963,3 +963,54 @@ CreateNodesError: Unable to create nodes for apps/auth-e2e/project.json using pl
 [NX Daemon Server] - 2024-01-07T16:40:48.349Z - [REQUEST]: hasura/.env
 [NX Daemon Server] - 2024-01-07T16:40:48.349Z - [REQUEST]: 
 [NX Daemon Server] - 2024-01-07T16:40:48.369Z - Time taken for 'hash changed files from watcher' 0.17904198169708252ms
+[NX Daemon Server] - 2024-01-07T16:41:16.270Z - [WATCHER]: hasura/.env was modified
+[NX Daemon Server] - 2024-01-07T16:41:16.270Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-07T16:41:20.124Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-07T16:41:20.124Z - [WATCHER]: apps/auth/src/app/app.module.ts was modified
+[NX Daemon Server] - 2024-01-07T16:41:21.860Z - [WATCHER]: apps/auth/src/app/app.module.ts was modified
+[NX Daemon Server] - 2024-01-07T16:41:21.860Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-07T16:41:22.672Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-07T16:41:22.673Z - [REQUEST]: hasura/.env,apps/auth/src/app/app.module.ts
+[NX Daemon Server] - 2024-01-07T16:41:22.673Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-07T16:41:22.700Z - Time taken for 'hash changed files from watcher' 0.4988749623298645ms
+[NX Daemon Server] - 2024-01-07T16:41:24.810Z - [WATCHER]: apps/auth/src/app/app.module.ts was modified
+[NX Daemon Server] - 2024-01-07T16:41:24.811Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-07T16:41:26.941Z - [WATCHER]: package.json was modified
+[NX Daemon Server] - 2024-01-07T16:41:26.941Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-07T16:41:27.458Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-07T16:41:27.458Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-07T16:41:27.458Z - [REQUEST]: apps/auth/src/app/app.module.ts,package.json
+[NX Daemon Server] - 2024-01-07T16:41:27.458Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-07T16:41:27.474Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-01-07T16:41:27.475Z - Time taken for 'total for creating and serializing project graph' 16.58033299446106ms
+[NX Daemon Server] - 2024-01-07T16:41:27.478Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-01-07T16:41:27.478Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 16. Response time: 4.
+[NX Daemon Server] - 2024-01-07T16:41:27.481Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-01-07T16:41:27.482Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-07T16:41:27.482Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-01-07T16:41:27.482Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-07T16:41:27.482Z - [REQUEST]: Responding to the client. handleRequestFileData
+[NX Daemon Server] - 2024-01-07T16:41:27.482Z - Done responding to the client handleRequestFileData
+[NX Daemon Server] - 2024-01-07T16:41:27.482Z - Handled REQUEST_FILE_DATA. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-01-07T16:41:28.148Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-07T16:41:28.148Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-07T16:41:28.148Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-07T16:41:28.150Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-07T16:41:28.150Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-01-07T16:41:28.151Z - Time taken for 'total for creating and serializing project graph' 0.05787503719329834ms
+[NX Daemon Server] - 2024-01-07T16:41:28.153Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-01-07T16:41:28.153Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 3.
+[NX Daemon Server] - 2024-01-07T16:41:28.176Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-07T16:41:28.176Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-01-07T16:41:28.177Z - Time taken for 'total for creating and serializing project graph' 0.3088749647140503ms
+[NX Daemon Server] - 2024-01-07T16:41:28.183Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-01-07T16:41:28.183Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 7.
+[NX Daemon Server] - 2024-01-07T16:41:28.187Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-07T16:41:28.188Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-01-07T16:41:28.190Z - Time taken for 'total for creating and serializing project graph' 0.10904198884963989ms
+[NX Daemon Server] - 2024-01-07T16:41:28.191Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-01-07T16:41:28.191Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 3.
+[NX Daemon Server] - 2024-01-07T16:41:28.218Z - [REQUEST]: Responding to the client. handleRequestFileData
+[NX Daemon Server] - 2024-01-07T16:41:28.218Z - Done responding to the client handleRequestFileData
+[NX Daemon Server] - 2024-01-07T16:41:28.218Z - Handled REQUEST_FILE_DATA. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-01-07T16:41:28.241Z - Closed a connection. Number of open connections: 1
