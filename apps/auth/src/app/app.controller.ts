@@ -8,6 +8,7 @@ import {
 import { PrismaClient } from '@prisma/client';
 import { Response } from 'express';
 import { AppService } from './app.service';
+
 @Controller()
 export class AppController {
   private db: PrismaClient;
