@@ -61,42 +61,90 @@
   "nxJsonPlugins": [],
   "fileMap": {
     "projectFileMap": {
-      "db-actions-sdk": [
+      "auth": [
         {
-          "file": "libs/db-actions-sdk/.eslintrc.json",
+          "file": "apps/auth/.env",
+          "hash": "2800350296170079583"
+        },
+        {
+          "file": "apps/auth/.eslintrc.json",
           "hash": "13800677001662881425"
         },
         {
-          "file": "libs/db-actions-sdk/README.md",
-          "hash": "6274950893493525956"
+          "file": "apps/auth/Dockerfile",
+          "hash": "16868440389866972241"
         },
         {
-          "file": "libs/db-actions-sdk/jest.config.ts",
-          "hash": "17772405106734086057"
+          "file": "apps/auth/ecosystem.config.js",
+          "hash": "8554047746922966901"
         },
         {
-          "file": "libs/db-actions-sdk/project.json",
-          "hash": "5769157399758366774"
+          "file": "apps/auth/jest.config.ts",
+          "hash": "17121752816927134594"
         },
         {
-          "file": "libs/db-actions-sdk/src/index.ts",
-          "hash": "8962049714223336412"
+          "file": "apps/auth/project.json",
+          "hash": "9931387554164150940"
         },
         {
-          "file": "libs/db-actions-sdk/src/lib/actions.ts",
-          "hash": "6204452896345975296"
+          "file": "apps/auth/src/app/app.controller.ts",
+          "hash": "11952637208348345005",
+          "deps": [
+            "npm:@nestjs/common",
+            "db-actions-sdk",
+            "npm:@prisma/client",
+            "npm:express"
+          ]
         },
         {
-          "file": "libs/db-actions-sdk/tsconfig.json",
-          "hash": "2840670722752396445"
+          "file": "apps/auth/src/app/app.module.ts",
+          "hash": "11439992448606929605",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
         },
         {
-          "file": "libs/db-actions-sdk/tsconfig.lib.json",
-          "hash": "8188472110264778699"
+          "file": "apps/auth/src/app/app.service.ts",
+          "hash": "15979031237519085868",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@prisma/client",
+            "npm:crypto",
+            "npm:express",
+            "npm:jsonwebtoken",
+            "npm:lodash"
+          ]
         },
         {
-          "file": "libs/db-actions-sdk/tsconfig.spec.json",
+          "file": "apps/auth/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/auth/src/main.ts",
+          "hash": "3637763552186710725",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/core"
+          ]
+        },
+        {
+          "file": "apps/auth/tsconfig.app.json",
+          "hash": "17628448778285850515"
+        },
+        {
+          "file": "apps/auth/tsconfig.json",
+          "hash": "12629745032125880412"
+        },
+        {
+          "file": "apps/auth/tsconfig.spec.json",
           "hash": "11550347367511341917"
+        },
+        {
+          "file": "apps/auth/webpack.config.js",
+          "hash": "5708803163266262522",
+          "deps": [
+            "npm:@nx/webpack"
+          ]
         }
       ],
       "cart": [
@@ -185,90 +233,42 @@
           ]
         }
       ],
-      "auth": [
+      "db-actions-sdk": [
         {
-          "file": "apps/auth/.env",
-          "hash": "2800350296170079583"
-        },
-        {
-          "file": "apps/auth/.eslintrc.json",
+          "file": "libs/db-actions-sdk/.eslintrc.json",
           "hash": "13800677001662881425"
         },
         {
-          "file": "apps/auth/Dockerfile",
-          "hash": "16868440389866972241"
+          "file": "libs/db-actions-sdk/README.md",
+          "hash": "6274950893493525956"
         },
         {
-          "file": "apps/auth/ecosystem.config.js",
-          "hash": "8554047746922966901"
+          "file": "libs/db-actions-sdk/jest.config.ts",
+          "hash": "17772405106734086057"
         },
         {
-          "file": "apps/auth/jest.config.ts",
-          "hash": "17121752816927134594"
+          "file": "libs/db-actions-sdk/project.json",
+          "hash": "5769157399758366774"
         },
         {
-          "file": "apps/auth/project.json",
-          "hash": "9931387554164150940"
+          "file": "libs/db-actions-sdk/src/index.ts",
+          "hash": "8962049714223336412"
         },
         {
-          "file": "apps/auth/src/app/app.controller.ts",
-          "hash": "11952637208348345005",
-          "deps": [
-            "npm:@nestjs/common",
-            "db-actions-sdk",
-            "npm:@prisma/client",
-            "npm:express"
-          ]
+          "file": "libs/db-actions-sdk/src/lib/actions.ts",
+          "hash": "6204452896345975296"
         },
         {
-          "file": "apps/auth/src/app/app.module.ts",
-          "hash": "11439992448606929605",
-          "deps": [
-            "npm:@nestjs/common"
-          ]
+          "file": "libs/db-actions-sdk/tsconfig.json",
+          "hash": "2840670722752396445"
         },
         {
-          "file": "apps/auth/src/app/app.service.ts",
-          "hash": "15979031237519085868",
-          "deps": [
-            "npm:@nestjs/common",
-            "npm:@prisma/client",
-            "npm:crypto",
-            "npm:express",
-            "npm:jsonwebtoken",
-            "npm:lodash"
-          ]
+          "file": "libs/db-actions-sdk/tsconfig.lib.json",
+          "hash": "8188472110264778699"
         },
         {
-          "file": "apps/auth/src/assets/.gitkeep",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/auth/src/main.ts",
-          "hash": "3637763552186710725",
-          "deps": [
-            "npm:@nestjs/common",
-            "npm:@nestjs/core"
-          ]
-        },
-        {
-          "file": "apps/auth/tsconfig.app.json",
-          "hash": "17628448778285850515"
-        },
-        {
-          "file": "apps/auth/tsconfig.json",
-          "hash": "12629745032125880412"
-        },
-        {
-          "file": "apps/auth/tsconfig.spec.json",
+          "file": "libs/db-actions-sdk/tsconfig.spec.json",
           "hash": "11550347367511341917"
-        },
-        {
-          "file": "apps/auth/webpack.config.js",
-          "hash": "5708803163266262522",
-          "deps": [
-            "npm:@nx/webpack"
-          ]
         }
       ]
     },
@@ -299,7 +299,7 @@
       },
       {
         "file": ".vscode/extensions.json",
-        "hash": "235626400633494639"
+        "hash": "3244421341483603138"
       },
       {
         "file": ".vscode/settings.json",
